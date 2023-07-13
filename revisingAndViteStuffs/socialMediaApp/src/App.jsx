@@ -1,11 +1,15 @@
 import './App.css'
-import BasicButtons from './Buttons'
+import PostCard from './PostCard'
+import NavBar from './Navbar/Navbar'
+
+
+
 function App() {
 
   return (
     <>
-      <BasicButtons/>
-      welcome
+      <NavBar/>
+      <PostCard/>
     </>
   )
 }
