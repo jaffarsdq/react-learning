@@ -1,7 +1,6 @@
 import './App.css'
-import PostCard from './PostCard'
 import NavBar from './Navbar/Navbar'
-
+import MainContainer from './MainContainer/MainContainer'
 
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <PostCard/>
+      <MainContainer/>
     </>
   )
 }
