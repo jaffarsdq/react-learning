@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import PostCardList from '../PostCardList/PostCardList';
+import UserList from '../UserList/UserList'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,12 +17,12 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function MainContainer() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid xs={5} container marginTop={'5px'} justifyContent={'end'}>
+      <Grid container spacing={2} justifyContent={'center'}>
+        <Grid xs={5} container marginTop={'5px'} justifyContent={'end'} alignContent={'start'}>
             {/* users */}
-          <Item>1</Item>
+            <UserList></UserList>
         </Grid>
-        <Grid container alignContent={'center'} marginTop={'5px'} direction={'column'} xs={6}>
+        <Grid container alignContent={'start'} marginTop={'5px'} direction={'column'} xs={6}>
           <PostCardList/>
         </Grid>
       </Grid>
