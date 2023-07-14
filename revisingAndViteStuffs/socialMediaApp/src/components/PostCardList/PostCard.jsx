@@ -11,8 +11,9 @@ import { CardActions } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useState } from 'react';
+import React from 'react';
 
-export default function PostCard({content, image, authorFirstName, authorSecondName, publishDate}) {
+function PostCard({content, image, authorFirstName, authorSecondName, publishDate}) {
 
   const [isliked, setIsliked] = useState(false);
     return (
@@ -53,3 +54,5 @@ export default function PostCard({content, image, authorFirstName, authorSecondN
       </Card>
     );
 }
+
+export default React.memo(PostCard) 
