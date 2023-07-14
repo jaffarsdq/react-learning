@@ -28,12 +28,12 @@ export default function PostCardList() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         // we will download content from dummyapi.io
-        console.log(import.meta.env.VITE_APP_ID)
         axios.get("https://dummyapi.io/data/v1/post",{
             headers: {'app-id': import.meta.env.VITE_APP_ID}
         })
         .then(response => {
             const responseObject = response.data;
+            console.log(responseObject);
             setPosts([...PostCardDetails,...responseObject.data]);
         })
     },[]) ;

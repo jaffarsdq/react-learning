@@ -18,7 +18,7 @@ export default function MainContainer() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} justifyContent={'center'}>
-        <Grid xs={5} container marginTop={'5px'} justifyContent={'end'} alignContent={'start'}>
+        <Grid  xs={5} container marginTop={'5px'} justifyContent={'end'} alignContent={'start'}>
             {/* users */}
             <UserList></UserList>
         </Grid>
