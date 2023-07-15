@@ -1,10 +1,9 @@
 import { useContext } from "react"
 import PostCard from "./PostCard"
-import PostCardContext from '../providers/PostsProviders'
+import PostCardContext from '../../providers/PostsProviders'
 
 
 export default function PostCardList() {
-    // const [posts, setPosts] = useState([]);
     const {posts} = useContext(PostCardContext);
 
     return (

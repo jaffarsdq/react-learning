@@ -1,43 +1,15 @@
 import  Box  from "@mui/material/Box";
 import TextField  from "@mui/material/TextField";
 import { Button } from "@mui/material";
-import { useState , useContext} from "react";
 import LoadingButton from '@mui/lab/LoadingButton';
-import axios from "axios";
-import PostCardContext from '../providers/PostsProviders'
+import useInput from '../../hooks/useInput'
 
 export default function Input() {
-
-    const [postText, setPostText] = useState("");
-    const [imageUrl, setImageUrl] = useState("");
-    const [loading, setLoading] = useState(false);
-    const {posts, setPosts} = useContext(PostCardContext);
-    async function createPost() {
-        console.log(posts);
-        setLoading(true);
-        axios.post("https://dummyapi.io/data/v1/post/create", 
-        {
-            owner: '60d0fe4f5311236168a109ca',
-            text: postText,
-            image: imageUrl,
-            likes: 0,
-            publishDate: new Date()
-        },
-        {
-            headers: {'app-id': import.meta.env.VITE_APP_ID}
-        }
-        )
-        .then(response => {
-            console.log(response.data);
-            setPosts([response.data, ...posts])
-            setLoading(false);
-            setPostText("");
-            setImageUrl("");
-        })
-    }
+    const [postText,setPostText,imageUrl,setImageUrl,loading,createPost] = useInput();
+    
 
     return (
-    <Box sx={{marginTop:2}}>
+    <Box sx={{margin:2}}>
         <TextField 
             fullWidth
             sx={{marginTop:2}}
@@ -61,7 +33,7 @@ export default function Input() {
         </TextField>
 
         {
-            (!loading) ? <Button loading variant="contained" onClick={createPost}>Submit</Button> : <LoadingButton loading variant="outlined">Submit</LoadingButton>
+            (!loading) ? <Button loading variant="contained" onClick= {createPost}>Submit</Button> : <LoadingButton loading variant="outlined">Submit</LoadingButton>
         }
 
     </Box>

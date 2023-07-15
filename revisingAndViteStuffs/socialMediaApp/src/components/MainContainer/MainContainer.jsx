@@ -16,8 +16,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function MainContainer() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} justifyContent={'center'}>
+    <Box sx={{ flexGrow: 1 }} gridRow={0}>
+      <Grid container spacing={0} justifyContent={'center'}>
         <Grid  xs={5} container marginTop={'5px'} justifyContent={'end'} alignContent={'start'}>
             {/* users */}
             <UserList></UserList>

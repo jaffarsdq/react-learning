@@ -1,0 +1,9 @@
+.NavHeading {
+    color: white;
+    text-decoration: none;
+}
+
+.NavHeading:hover {
+    transform: rotate(45deg);
+    color: black;
+}
