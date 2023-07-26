@@ -29,21 +29,48 @@ label {
     font-size: 14px;
 }
 
-
-.submit-btn {
-    width: 100px;
-    margin: 0 auto;
+.buttons {
+    display: flex;
+    justify-content: space-between;
 }
 
 .submit-btn button {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 7px;
+    width: 80px;
+    border-radius: 4px;
     border: 2px solid transparent;
-    width: 100px;
     font-size: 15px;
-    background-color: #0050a6;
+    background-color: #00a65e;
+    
 }
 
 .submit-btn button:hover {
+    border-color: #94e4c2;
+}
+
+
+
+.next-btn button{
+    padding: 7px;
+    width: 80px;
+    border-radius: 8px 50px  50px 8px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    background-color: #0050a6;}
+
+.next-btn button:hover {
     border-color: #9ecdff;
+}
+
+.previous-btn button{
+    padding: 7px;
+    width: 80px;
+    border-radius: 50px 8px  8px 50px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    background-color: #a61100;
+}
+
+.previous-btn button:hover {
+    border-color: #e49494;
 }
